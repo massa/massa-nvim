@@ -9,7 +9,7 @@ return function(module)
   vim.keymap.set('n', '<Leader>dr', module.repl.open, { silent = true })
   vim.keymap.set('n', '<Leader>dl', module.run_last, { silent = true })
 
-  module.adapters.cpp = {
+  module.adapters.lldb = {
     type = 'executable',
     attach = {
       pidProperty = "pid",
@@ -25,15 +25,11 @@ return function(module)
   module.configurations.cpp = {
     {
       name = "lldb",
-      type = "cpp",
+      type = "lldb",
       request = "launch",
-      program = function()
-        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-      end,
       cwd = '${workspaceFolder}',
       externalTerminal = false,
       stopOnEntry = false,
-      args = {}
     },
   }
 

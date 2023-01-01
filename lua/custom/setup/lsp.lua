@@ -1,14 +1,14 @@
 return function(module)
   module.preset 'recommended'
   module.ensure_installed {
+    'sumneko_lua',
+    'raku_navigator',
     'clangd',
     'gopls',
     'pyright',
     'rust_analyzer',
     'tsserver',
     'perlnavigator',
-    'raku_navigator',
-    'sumneko_lua'
   }
   module.set_preferences({
     set_lsp_keymaps = { omit = { '<F2>', '<F4>' } }

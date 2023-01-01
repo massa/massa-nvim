@@ -37,6 +37,7 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 
 vim.keymap.set({'i', 'n'}, '<F2>', vim.cmd.write)
 vim.keymap.set({'i', 'n'}, '<F4>', vim.cmd.quit)
+vim.keymap.set({'i', 'n'}, '<F3>', vim.cmd.quitall)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)

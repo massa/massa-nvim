@@ -129,4 +129,6 @@ return function(use)
    'rcarriga/nvim-dap-ui',
    requires = 'mfussenegger/nvim-dap'
    }
+
+   use 'Shatur/neovim-tasks'
 end

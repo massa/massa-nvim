@@ -20,3 +20,4 @@ setup('lsp', 'lsp-zero')
 setup 'cmp'
 setup 'nvim-tree'
 setup 'dap'
+setup 'tasks'
