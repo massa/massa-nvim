@@ -9,16 +9,21 @@ return function(module)
     perlnavigator = {},
     raku_navigator = {},
     sumneko_lua = {
-      Lua = {
-        workspace = { checkThirdParty = false },
-        telemetry = { enable = false },
-      },
+      settings = {
+        Lua = {
+          workspace = { checkThirdParty = false },
+          telemetry = { enable = false },
+        },
+      }
+    },
+    sqls = {
     },
   }
   module.set_preferences({
     set_lsp_keymaps = { omit = { '<F2>', '<F4>' } }
   })
   module.on_attach(function(client, bufnr)
+    require('sqls').on_attach(client, bufnr)
     if client.server_capabilities.documentSymbolProvider then
       require('nvim-navic').attach(client, bufnr)
     end
@@ -30,10 +35,7 @@ return function(module)
     ensure_installed = vim.tbl_keys(servers),
     setup_handlers = {
       function(server_name)
-        require('lspconfig')[server_name].setup {
-          capabilities = capabilities,
-          settings = servers[server_name],
-        }
+        require('lspconfig')[server_name].setup(vim.tbl_extend({ capabilities = capabilities }, servers[server_name]))
       end,
     }
   }

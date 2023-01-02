@@ -38,17 +38,7 @@ return function(module)
     sources = {
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
+      { name = 'vim-dadbod-completion' },
     },
   }
-
-  vim.api.nvim_create_autocmd('FileType', {
-    callback = function()
-      module.setup.buffer {
-        sources = {
-          name = 'vim-dadbod-completion',
-        }
-      }
-    end,
-    pattern = 'sql,mysql,plsql',
-  })
 end
