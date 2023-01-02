@@ -97,7 +97,6 @@ return function(use)
     }
   }
 
-  use 'kristijanhusak/vim-dadbod-completion'
   use {
     'kristijanhusak/vim-dadbod-ui',
     cmd = {
@@ -116,6 +115,8 @@ return function(use)
         'tpope/vim-dadbod',
         opt = true,
       },
+      'kristijanhusak/vim-dadbod-completion',
+      'pbogut/vim-dadbod-ssh',
     },
     opt = true,
   }

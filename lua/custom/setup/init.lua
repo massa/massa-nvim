@@ -11,6 +11,7 @@ end
 setup('colors', 'rose-pine')
 setup 'nvim-navic'
 setup 'bufferline'
+setup 'harpoon'
 setup 'Comment'
 setup 'indent_blankline'
 setup 'gitsigns'
