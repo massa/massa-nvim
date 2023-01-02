@@ -1,6 +1,10 @@
 return function(module)
   module.setup {
-      dap_open_command = function(...) require('dapui').open(...) end,
+    default_params = {
+      cmake = {
+        dap_name = 'codelldb'
+      }
+    }
   }
-  vim.keymap.set('n', '<F5>', function() vim.cmd [[Task start cmake debug]] end, { silent = true })
+  vim.keymap.set('n', '<F10>', function() vim.cmd [[Task start cmake debug]] end, { silent = true })
 end

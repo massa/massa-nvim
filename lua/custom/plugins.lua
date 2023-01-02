@@ -126,9 +126,13 @@ return function(use)
   }
 
   use {
-   'rcarriga/nvim-dap-ui',
-   requires = 'mfussenegger/nvim-dap'
-   }
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      'mfussenegger/nvim-dap',
+      'theHamsta/nvim-dap-virtual-text',
+      'nvim-telescope/telescope-dap.nvim',
+    }
+  }
 
-   use 'Shatur/neovim-tasks'
+  use 'Shatur/neovim-tasks'
 end
