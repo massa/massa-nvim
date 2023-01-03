@@ -35,6 +35,7 @@ if is_bootstrap then
   print '    Wait until Packer completes,'
   print '    then nvim will exit'
   print '=================================='
+  print ''
   return
 end
 
