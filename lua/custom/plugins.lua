@@ -116,12 +116,10 @@ return function(use)
     requires = {
       {
         'tpope/vim-dadbod',
-        opt = true,
       },
       'kristijanhusak/vim-dadbod-completion',
       'pbogut/vim-dadbod-ssh',
     },
-    opt = true,
   }
 
   use {
@@ -139,4 +137,9 @@ return function(use)
   }
 
   use 'Shatur/neovim-tasks'
+--  use 'chen244/csv-tools.lua'
+  use {
+    'mechatroner/rainbow_csv',
+    ft = 'csv'
+  }
 end
