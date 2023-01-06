@@ -1,31 +1,14 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
--- Set highlight on search
-vim.o.hlsearch = false
-
--- Make line numbers default
-vim.wo.number = false
-
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true
 
--- Save undo history
-vim.o.undofile = true
-
--- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
 -- Decrease update time
-vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
-
--- Set colorscheme
-vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -61,11 +44,13 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.undodir = vim.fn.stdpath 'cache' .. '/undodir'
 vim.opt.undofile = true
+vim.opt.shada = "!,%,'100,<50,s10,h"
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
@@ -74,7 +59,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
 vim.opt.isfname:append('@-@')
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 vim.opt.colorcolumn = '132'
 
