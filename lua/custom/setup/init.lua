@@ -16,10 +16,11 @@ setup 'Comment'
 setup 'indent_blankline'
 setup 'gitsigns'
 setup 'telescope'
-setup 'treesitter'
+setup('treesitter', 'nvim-treesitter.configs')
 setup('lsp', 'lsp-zero')
 setup 'cmp'
 setup 'nvim-tree'
 setup 'dap'
 setup 'tasks'
 setup 'csvtools'
+setup 'rest-nvim'
