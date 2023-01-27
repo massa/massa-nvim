@@ -7,9 +7,9 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-require 'custom.options'
-require 'custom.keys'
-require 'custom.auto'
+require 'options'
+require 'keys'
+require 'auto'
 
 local packer = require 'packer'
 
@@ -17,7 +17,7 @@ packer.startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
-  local plugins = require 'custom.plugins'
+  local plugins = require 'plugins'
   plugins(use)
   if is_bootstrap then
     vim.cmd [[autocmd User PackerComplete quitall!]]
@@ -46,8 +46,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   group = packer_group,
   pattern = vim.fn.expand '$MYVIMRC',
 })
-
-require 'custom.setup'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

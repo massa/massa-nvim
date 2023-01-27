@@ -40,5 +40,4 @@ luac.out
 *.hex
 
 # ignored directories
-plugin/
-after/
+./plugin/

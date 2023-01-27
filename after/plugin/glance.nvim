@@ -1,0 +1,3 @@
+local name = 'glance'
+local module = require(name)
+module.setup {}

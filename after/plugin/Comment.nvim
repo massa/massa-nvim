@@ -1,0 +1,3 @@
+local name = 'Comment'
+local module = require(name)
+module.setup {}
